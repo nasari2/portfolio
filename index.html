@@ -4,47 +4,125 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
-    header {
-      background: #333;
+
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
       color: #fff;
-      padding: 15px;
+      line-height: 1.6;
+    }
+
+    header {
       text-align: center;
+      padding: 60px 20px;
+      animation: fadeIn 1s ease-in-out;
     }
+
+    header h1 {
+      font-size: 40px;
+      font-weight: 600;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+      color: #94a3b8;
+    }
+
     section {
-      padding: 20px;
-      margin: 10px;
-      background: #fff;
-      border-radius: 10px;
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      animation: fadeUp 1s ease;
     }
+
     h2 {
-      color: #333;
+      margin-bottom: 15px;
+      font-size: 24px;
+      border-bottom: 2px solid #38bdf8;
+      display: inline-block;
+      padding-bottom: 5px;
     }
+
     ul {
       list-style: none;
-      padding: 0;
     }
+
     li {
-      padding: 5px 0;
+      margin: 10px 0;
     }
+
+    /* Project Cards */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: #38bdf8;
+      color: #000;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background: #0ea5e9;
+    }
+
     footer {
       text-align: center;
-      padding: 10px;
-      background: #333;
-      color: #fff;
+      padding: 20px;
+      margin-top: 30px;
+      color: #94a3b8;
     }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Your Name</h1>
+  <h1>NASARI K</h1>
   <p>Python Developer | Data Science Enthusiast</p>
 </header>
 
@@ -65,12 +143,33 @@
 
 <section>
   <h2>Projects</h2>
-  <ul>
-    <li><b>Cake Shop Management System</b> - Built using Django</li>
-     <li><b>Smart Street Light</b> - Built using Django & Android</li>
-    <li><b>Marble Shop Management System</b> - Inventory & Sales tracking</li>
-    <li><b>Data Analysis Project</b> - Visualization using Power BI</li>
-  </ul>
+  <div class="projects">
+
+    <div class="card">
+      <h3>Cake Shop Management System</h3>
+      <p>Built using Django for order & inventory management.</p>
+      <a href="#" class="btn">View Code</a>
+    </div>
+
+    <div class="card">
+      <h3>Smart Street Light</h3>
+      <p>IoT + Android based smart lighting system.</p>
+      <a href="#" class="btn">View Code</a>
+    </div>
+
+    <div class="card">
+      <h3>Marble Shop System</h3>
+      <p>Inventory & sales tracking system.</p>
+      <a href="#" class="btn">View Code</a>
+    </div>
+
+    <div class="card">
+      <h3>Data Analysis Project</h3>
+      <p>Visualization using Power BI dashboards.</p>
+      <a href=" github.com/nasari2" class="btn">View Code</a>
+    </div>
+
+  </div>
 </section>
 
 <section>
@@ -78,6 +177,12 @@
   <p>Data Science Intern at Techolas Technologies (Feb 2026 - Present)</p>
 </section>
 
+<footer>
+  <p>© 2026 Your Name | Portfolio</p>
+</footer>
+
+</body>
+</html>
 <section>
   <h2>Contact</h2>
   <p>Email: nasrinechuzz@gmail.com</p>
