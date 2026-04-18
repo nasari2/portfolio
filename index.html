@@ -257,14 +257,21 @@ footer{
 <script>
 const sections = document.querySelectorAll("section");
 
-window.addEventListener("scroll", () => {
+function showSections() {
   sections.forEach(sec => {
     const top = sec.getBoundingClientRect().top;
-    if(top < window.innerHeight - 100){
+
+    if (top < window.innerHeight - 100) {
       sec.classList.add("show");
     }
   });
-});
+}
+
+// RUN ON LOAD
+window.addEventListener("load", showSections);
+
+// RUN ON SCROLL
+window.addEventListener("scroll", showSections);
 </script>
 </body>
 </html>
