@@ -24,6 +24,172 @@ h2{margin-bottom:15px;color:#38bdf8}
 .btn{display:inline-block;margin-top:10px;padding:8px 12px;background:#38bdf8;color:#000;text-decoration:none;border-radius:6px}
 
 footer{text-align:center;padding:20px;color:#94a3b8}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif
+}
+
+body{
+  background:linear-gradient(135deg,#020617,#0f172a);
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:100px 20px;
+  animation:fadeDown 1s ease;
+}
+
+header h1{
+  font-size:48px;
+  background:linear-gradient(90deg,#38bdf8,#818cf8);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+header p{
+  color:#cbd5f5;
+  margin-top:10px;
+  font-size:18px;
+}
+
+/* SECTION */
+section{
+  max-width:1000px;
+  margin:30px auto;
+  padding:30px;
+  background:rgba(255,255,255,0.05);
+  border-radius:14px;
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.08);
+
+  opacity:0;
+  transform:translateY(40px);
+  animation:fadeUp 0.8s ease forwards;
+}
+
+/* stagger animation */
+section:nth-child(2){animation-delay:0.2s}
+section:nth-child(3){animation-delay:0.4s}
+section:nth-child(4){animation-delay:0.6s}
+section:nth-child(5){animation-delay:0.8s}
+section:nth-child(6){animation-delay:1s}
+
+/* HEADINGS */
+h2{
+  margin-bottom:15px;
+  color:#38bdf8;
+  position:relative;
+}
+
+h2::after{
+  content:"";
+  width:40px;
+  height:3px;
+  background:#38bdf8;
+  position:absolute;
+  bottom:-5px;
+  left:0;
+}
+
+/* PROJECT GRID */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* CARD */
+.card{
+  background:#1e293b;
+  padding:20px;
+  border-radius:12px;
+  transition:0.4s;
+  position:relative;
+  overflow:hidden;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,#38bdf8,transparent);
+  opacity:0;
+  transition:0.5s;
+  pointer-events:none;
+}
+
+.card:hover::before{
+  opacity:0.2;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 15px 35px rgba(0,0,0,0.5);
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 14px;
+  background:linear-gradient(90deg,#38bdf8,#0ea5e9);
+  color:#000;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 5px 15px rgba(56,189,248,0.5);
+}
+
+/* LIST */
+ul{
+  padding-left:18px;
+}
+
+ul li{
+  margin-bottom:8px;
+  color:#cbd5f5;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:25px;
+  color:#94a3b8;
+}
+
+/* ANIMATIONS */
+@keyframes fadeDown{
+  from{
+    opacity:0;
+    transform:translateY(-40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
 </style>
 </head>
 
