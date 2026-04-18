@@ -3,150 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nasari K | Portfolio</title>
+<title>| Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:linear-gradient(135deg,#020617,#0f172a);color:#fff}
 
-body{
-  background:linear-gradient(135deg,#020617,#0f172a);
-  color:#fff;
-  scroll-behavior:smooth;
-}
+header{text-align:center;padding:80px 20px}
+header h1{font-size:42px;color:#38bdf8}
+header p{color:#cbd5f5;margin-top:10px}
 
-/* HEADER */
-header{
-  text-align:center;
-  padding:80px 20px;
-  animation:fadeDown 1s ease;
-}
+section{max-width:1000px;margin:20px auto;padding:25px;background:rgba(255,255,255,0.05);border-radius:12px}
+h2{margin-bottom:15px;color:#38bdf8}
 
-header h1{
-  font-size:42px;
-  background:linear-gradient(90deg,#38bdf8,#818cf8);
-  -webkit-background-clip:text;
-  color:transparent;
-}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:#1e293b;padding:20px;border-radius:10px;transition:0.3s}
+.card:hover{transform:translateY(-5px)}
 
-header p{
-  color:#cbd5f5;
-  margin-top:10px;
-}
+.btn{display:inline-block;margin-top:10px;padding:8px 12px;background:#38bdf8;color:#000;text-decoration:none;border-radius:6px}
 
-/* SECTIONS */
-section{
-  max-width:1000px;
-  margin:20px auto;
-  padding:25px;
-  background:rgba(255,255,255,0.05);
-  border-radius:12px;
-  backdrop-filter:blur(10px);
-
-  opacity:0;
-  transform:translateY(40px);
-  transition:all 0.6s ease;
-}
-
-section.show{
-  opacity:1;
-  transform:translateY(0);
-}
-
-h2{
-  margin-bottom:15px;
-  color:#38bdf8;
-}
-
-/* PROJECT GRID */
-.projects{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-/* CARD */
-.card{
-  background:#1e293b;
-  padding:20px;
-  border-radius:10px;
-  transition:0.3s;
-  position:relative;
-  overflow:hidden;
-}
-
-.card::before{
-  content:"";
-  position:absolute;
-  width:100%;
-  height:100%;
-  background:linear-gradient(120deg,transparent,#38bdf8,transparent);
-  opacity:0;
-  transition:0.5s;
-}
-
-.card:hover::before{
-  opacity:0.2;
-}
-
-.card:hover{
-  transform:translateY(-8px) scale(1.03);
-  box-shadow:0 10px 30px rgba(56,189,248,0.3);
-}
-
-/* BUTTON */
-.btn{
-  display:inline-block;
-  margin-top:10px;
-  padding:8px 12px;
-  background:#38bdf8;
-  color:#000;
-  text-decoration:none;
-  border-radius:6px;
-  transition:0.3s;
-  cursor:pointer;
-}
-
-.btn:hover{
-  background:#0ea5e9;
-  transform:scale(1.05);
-}
-
-/* LIST */
-ul li{
-  margin-bottom:8px;
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:20px;
-  color:#94a3b8;
-}
-
-/* ANIMATION */
-@keyframes fadeDown{
-  from{
-    opacity:0;
-    transform:translateY(-40px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
+footer{text-align:center;padding:20px;color:#94a3b8}
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>Nasari K</h1>
+<h1></h1>
 <p>Python Developer | Django | Data Science</p>
 </header>
 
@@ -180,19 +64,19 @@ footer{
 <div class="card">
 <h3> 🍰 Bakery Management System</h3>
 <p>Django-based system for orders, billing, and inventory.</p>
-<a href="https://github.com/nasari2/Mev_Cake_Project" target="_blank" class="btn">View</a>
+<a href="https://github.com/nasari2/Mev_Cake_Project" class="btn">View</a>
 </div>
 
 <div class="card">
 <h3> ⬜ Marble Inventory System</h3>
 <p>Python + MySQL based inventory and sales system.</p>
-<a href="https://github.com/nasari2/marbleproject"  target="_blank"class="btn">View</a>
+<a href="https://github.com/nasari2/marbleproject" class="btn">View</a>
 </div>
 
 <div class="card">
 <h3> ⬜ Sales Prediction Dashboard  </h3>
 <p>Python + MySQL based inventory and sales system.</p>
-<a href="https://github.com/nasari2/sales-dashboard" target="_blank" class="btn">View</a>
+<a href="https://github.com/nasari2/sales-dashboard" class="btn">View</a>
 </div>
 
 
@@ -201,19 +85,12 @@ footer{
 <p>A machine learning-based web application that analyzes and predicts personal expenses.Users can upload CSV data to view insights, category-wise spending, and future expense predictions.
 </p>
 <p><strong>Tech Stack:</strong> Python, Pandas, Scikit-learn, Streamlit</p>
-<a href="https://github.com/nasari2/expense-analyzer" target="_blank" class="btn">View</a>
-<a href="https://github.com/nasari2/marbleproject" 
-   target="_blank" 
-   rel="noopener noreferrer" 
-   class="btn">
-   View
-</a>
+<a href="https://github.com/nasari2/expense-analyzer" class="btn">View</a>
 </div>
 
 <div class="card">
 <h3> 💡Smart Street Light</h3>
 <p>IoT-based automation system for energy efficiency.</p>
-<a href="https://google.com" target="_blank" class="btn">View</a>
 </div>
 
 </div>
@@ -255,33 +132,17 @@ footer{
 
 <section>
 <h2>Contact</h2>
-<p>Email: nasrinechuzz@gmail.com</p>
-<p>GitHub: https://github.com/nasari2</p>
-<p>LinkedIn: www.linkedin.com/in/nasarik </p>
+<p>Email: @gmail.com</p>
+<p>GitHub: </p>
+<p>LinkedIn: </p>
 </section>
 
 <footer>
-<p>© 2026 Nasari K</p>
+<p>© 2026</p>
 </footer>
-<script>
-const sections = document.querySelectorAll("section");
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-}, {
-  threshold: 0.1
-});
-
-sections.forEach(sec => {
-  observer.observe(sec);
-});
-</script>
 </body>
-</html>
+</html>                                this portfolio design and animate varety style 
 
 
 
